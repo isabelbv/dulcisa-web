@@ -1,0 +1,81 @@
+/* --- NUEVO DISEÑO DE SELECTOR DE CANTIDAD --- */
+.ajuste-cantidad-box {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.ajuste-cantidad-label {
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    overflow: hidden; /* Para que los botones se adapten a las esquinas redondeadas */
+    transition: border-color 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: #8933b8; /* El lila de tu marca */
+}
+
+.input-ajuste {
+    width: 60px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 0;
+    outline: none;
+    -moz-appearance: textfield; /* Quita flechas en Firefox */
+}
+
+/* Quita las flechitas de los inputs de número */
+.input-ajuste::-webkit-outer-spin-button,
+.input-ajuste::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-ajuste {
+    border: none;
+    background: #fff;
+    color: #333;
+    padding: 8px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-sumar {
+    border-left: 1px solid #eee;
+    color: #28a745; /* Verde suave */
+}
+
+.btn-restar {
+    border-right: 1px solid #eee;
+    color: #dc3545; /* Rojo suave */
+}
+
+.btn-ajuste:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-sumar:hover { color: #1e7e34; }
+.btn-restar:hover { color: #bd2130; }
+
+.btn-ajuste:active {
+    background-color: #e9ecef;
+}

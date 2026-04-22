@@ -1,0 +1,46 @@
+.footer-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 0 2px 0;
+  width: 100%;
+  margin-top: 10px;
+  border-top: 2px solid rgb(173, 211, 249);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 5px;
+}
+
+.footer-section {
+  text-align: center;
+  flex: 1;
+}
+
+.footer-logo {
+  font-family: "Segoe UI", sans-serif;
+  color: rgb(118, 92, 19);
+  font-size: 20px;
+}
+
+.footer-description {
+  font-size: 11px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  color: #800;
+  font-size: 0.9rem;
+}
+
+.footer-pie {
+  font-size: 11px;
+}

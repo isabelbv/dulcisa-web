@@ -1,0 +1,84 @@
+/* ===================================================
+   CÓDIGO FINAL: Fondo azul lavanda con acentos morados
+   =================================================== */
+
+/* Color de fondo para toda la sección central */
+.catalogo-container {
+    background-color: #eae3f5 !important; /* Azul lavanda suave del menú */
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:190px;
+}
+
+/* Título principal: "Nuestra Pastelería Dulcisa" */
+.catalogo-container h1 {
+    color: #a6d2e4; 
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Cuadrícula de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+    gap: 50px;
+    padding: 20px;
+    justify-content: center;
+}
+@media (max-width:768px){
+    .productos-grid{
+
+      grid-template-columns: repeat(1,1fr);
+    }
+}
+/* Tarjeta Blanca para que resalte sobre el fondo azul */
+
+
+/* TÍTULO DEL POSTRE (Recuperando el morado) */
+.producto-card h3 {
+    color: #a3caf6; /* Morado corporativo */
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+
+
+/* Descripción y Precio */
+.producto-card p { color: #555; }
+.producto-card .precio {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #a37ad5;
+    margin: 10px 0;
+}
+
+/* BOTÓN AÑADIR (Recuperando el morado) */
+.producto-card button {
+    background-color: #4a148c; /* Fondo morado */
+    color: white;              /* Texto blanco */
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.producto-card button:hover {
+    background-color: #6a1b9a; /* Un morado un poco más claro al pasar el ratón */
+}
+
+/* Botones de filtro superiores */
+.btn-filtro {
+    background-color: white;
+    border: 2px solid #4a148c;
+    color: #4a148c;
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin: 0 5px 30px 5px;
+    cursor: pointer;
+    font-weight: bold;
+}

@@ -1,0 +1,99 @@
+.ubicacion-container {
+    padding: 120px 20px 60px; /* Espacio para que el menú no lo tape */
+    background-color: #eae3f5; /* El azul lavanda que usas */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-seccion {
+    color: #890cae;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.ubicacion-content {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.mapa-box {
+    flex: 1.5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.info-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-info {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #890cae;
+}
+
+.card-info h3 {
+    color: #890cae;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.card-info p {
+    font-size: 1.1rem;
+    color: #444;
+    margin: 5px 0;
+}
+
+.lista-horarios {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-horarios li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.lista-horarios li span {
+    font-weight: bold;
+    color: #333;
+}
+
+.contacto-directo {
+    background: linear-gradient(135deg, #890cae, #a37ad5);
+}
+
+.contacto-directo h3, .contacto-directo p {
+    color: white !important;
+}
+
+/* RESPONSIVE: Para móviles */
+@media (max-width: 900px) {
+    .ubicacion-content {
+        flex-direction: column;
+    }
+    .mapa-box, .info-box {
+        width: 100%;
+    }
+    .titulo-seccion {
+        font-size: 1.8rem;
+    }
+}

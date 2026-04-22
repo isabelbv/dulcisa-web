@@ -1,0 +1,120 @@
+.contacto-page-container {
+    background-color: #eae3f5; /* El mismo fondo que tu catálogo */
+    padding: 150px 20px 60px; /* Padding superior alto para que no lo tape el menú */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-seccion {
+    color: #890cae;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: Ubicación y Contacto */
+    gap: 40px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Estilos para la zona del Mapa */
+.seccion-ubicacion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mapa-contenedor {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.info-tienda {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 6px solid #890cae;
+}
+
+/* Estilos para el Formulario */
+.card-formulario {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card-formulario h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-dulcisa {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-dulcisa input, .form-dulcisa textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.btn-enviar-contacto {
+    background-color: #890cae;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar-contacto:hover {
+    background-color: #4a148c; /* Morado más oscuro al pasar el ratón */
+}
+
+/* Responsivo: En móvil se pone una cosa debajo de otra */
+@media (max-width: 800px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+    .contacto-page-container {
+        padding-top: 120px;
+    }
+}
+
+.encargo-detalles {
+    display: flex;
+    gap: 15px;
+}
+
+.encargo-detalles .fecha-box {
+    flex: 1;
+}
+
+.fecha-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+    color: #890cae;
+    font-weight: bold;
+}
+
+/* Para que se vea bien en móviles */
+@media (max-width: 600px) {
+    .encargo-detalles {
+        flex-direction: column;
+    }
+}

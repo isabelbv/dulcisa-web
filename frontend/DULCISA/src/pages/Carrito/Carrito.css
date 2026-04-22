@@ -1,0 +1,209 @@
+/* 1. CONFIGURACIÓN GENERAL */
+.carrito-container { 
+    padding: 40px; 
+    min-height: 80vh; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.carrito-titulo { 
+    text-align: center; 
+    color: #8933b8; 
+    margin-bottom: 30px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. DISEÑO DEL CARRITO (CON PRODUCTOS) */
+.carrito-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.lista-items {
+    flex: 2;
+}
+
+/* Tarjeta del dulce */
+.card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.item-detalles h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+/* --- EL GRUPO DEL INPUT Y BOTONES (LO QUE QUERÍAS) --- */
+.ajuste-cantidad-box { 
+    margin-top: 15px; 
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    width: fit-content;
+    overflow: hidden;
+    background: #fff;
+}
+
+.input-ajuste {
+    width: 50px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.btn-ajuste {
+    border: none;
+    background: #f8f8f8;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.btn-sumar { 
+    color: #28a745; 
+    border-left: 1px solid #eee; 
+}
+
+.btn-restar { 
+    color: #dc3545; 
+    border-right: 1px solid #eee; 
+}
+
+.btn-ajuste:hover { 
+    background: #eee; 
+}
+
+/* 3. COLUMNA DERECHA (PAGO) */
+.total-box {
+    flex: 1;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 100px;
+    min-width: 250px;
+}
+
+.precio-final { 
+    font-size: 28px; 
+    font-weight: bold; 
+    color: #6b1891; 
+    margin: 20px 0;
+}
+
+.boton-pagar { 
+    width: 100%; 
+    padding: 15px; 
+    background: #154184; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+/* 4. MENSAJE CARRITO VACÍO */
+.carrito-vacio-container { 
+    text-align: center; 
+    padding: 80px 20px;
+    background: white;
+    border-radius: 15px;
+}
+
+.boton-volver { 
+    display: inline-block; 
+    margin-top: 20px; 
+    padding: 12px 25px; 
+    background: #8933b8; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 8px; 
+    font-weight: bold;
+}
+
+/* 5. MÓVIL */
+@media (max-width: 768px) {
+    .carrito-layout { flex-direction: column; }
+    .total-box { width: 100%; position: static; }
+}
+/* El grupo del input y botones pegaditos */
+.ajuste-cantidad-box { 
+    margin-top: 10px; 
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: fit-content;
+    overflow: hidden;
+    background: white;
+}
+
+.input-ajuste {
+    width: 45px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.btn-ajuste {
+    border: none;
+    background: #f0f0f0;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-sumar { color: #28a745; border-left: 1px solid #ddd; }
+.btn-restar { color: #dc3545; border-right: 1px solid #ddd; }
+.btn-ajuste:hover { background: #e5e5e5; }
+
+/* Caja de la derecha */
+.total-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.divisor {
+    height: 1px;
+    background: #eee;
+    margin: 15px 0;
+}
+
+.total-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.precio-final {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6b1891;
+    margin-bottom: 20px;
+}
