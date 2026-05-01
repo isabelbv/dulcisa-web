@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useCarrito } from "../Carrito/CarritoContext";
+import { useCarrito } from "../../hooks/useCarrito";
 import "./Navbar.css";
 const Navbar = () => {
   const location = useLocation();

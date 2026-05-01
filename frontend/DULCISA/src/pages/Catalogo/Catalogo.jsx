@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from "react"; // 1. Añadimos hooks
+import React, { useState, useEffect } from "react";
 import Producto from "../Productos/Productos";
 import "./estilos.css";
-import { useCarrito } from "../../Components/Carrito/CarritoContext";
+import { useCarrito } from "../../hooks/useCarrito";
 
 const Catalogo = () => {
   const { agregarAlCarrito } = useCarrito();
-
-  // 2. Estados para guardar los productos de la BD y el estado de la carga
   const [listaProductos, setListaProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
 
-  // 3. Llamada a la base de datos cuando el componente se monta
   useEffect(() => {
-    // CAMBIA ESTA URL por la ruta real donde esté tu conexion.php
-    // Ejemplo: "http://localhost/tu_proyecto/conexion.php"
     fetch("http://localhost/apidulcisa/conexion.php")
       .then((response) => response.json())
       .then((data) => {
@@ -30,12 +25,9 @@ const Catalogo = () => {
       });
   }, []);
 
-  // Mensaje de espera mientras cargan los datos
   if (cargando) {
     return (
-      <div style={{ textAlign: "center", padding: "50px" }}>
-        Cargando dulces...
-      </div>
+      <div className="loading-container">Cargando dulces...</div>
     );
   }
 

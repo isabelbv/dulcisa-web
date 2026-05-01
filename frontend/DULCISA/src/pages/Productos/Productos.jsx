@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useCarrito } from "../../Components/Carrito/CarritoContext";
+import { useCarrito } from "../../hooks/useCarrito";
 import "./Productos.css";
 
 const Producto = ({
@@ -23,7 +23,6 @@ const Producto = ({
   const listaAlergenos = alergenos ? alergenos.split(",") : [];
   return (
     <div className="producto-card">
-      {/* El badge desaparece cuando entramos en modo gigante */}
       {cantidadEnCesta > 0 && !isFlipped && (
         <div className="badge-whatsapp">{cantidadEnCesta}</div>
       )}
@@ -33,43 +32,28 @@ const Producto = ({
         onClick={() => setIsFlipped(!isFlipped)}
       >
         <div className="flipper">
-          {/* CARA DELANTE */}
           <div className="front">
-            <img
-              src={imagen}
-              alt={nombre}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                borderRadius: "15px",
-              }}
-            />
+            <img className="stock-img" src={imagen} alt={nombre} />
           </div>
 
-          {/* CARA DETRÁS (EXTENSIÓN GIGANTE) */}
           <div className="back">
-            {/* Título incrustado en el borde superior */}
             <h2 className="titulo-extension">{nombre}</h2>
 
-            {/* La descripción bien grande en el centro */}
             <p className="descripcion-detallada">{descripcion}</p>
 
             <p className="ingredientes">{ingredientes}</p>
 
-            {listaAlergenos.map((url, index) => (
-              <img
-                key={index}
-                src={url}
-                alt="Alérgeno"
-                style={{
-                  width: "60px",
-                  height: "60px",
-                }}
-              />
-            ))}
+            <div className="list-alergenos">
+              {listaAlergenos.map((url, index) => (
+                <img
+                  className="icono-alerge"
+                  key={index}
+                  src={url}
+                  alt="Alérgeno"
+                />
+              ))}
+            </div>
 
-            {/* Precio en una burbuja abajo */}
             <div className="precio-extension">{precio}€</div>
 
             <span className="pie-card">(Toca para cerrar)</span>
@@ -77,7 +61,6 @@ const Producto = ({
         </div>
       </div>
 
-      {/* Lo que se ve en el catálogo normal (abajo de la foto) */}
       <div style={{ marginTop: "15px" }}>
         <h3>{nombre}</h3>
         <p style={{ fontWeight: "bold", color: "#790a9a" }}>{precio}€</p>
@@ -87,20 +70,9 @@ const Producto = ({
             e.stopPropagation();
             onAgregar();
           }}
-          style={{
-            backgroundColor:
-              limiteAlcanzado || stock === 0 ? "#ccc" : "#890cae",
-            color: "white",
-            border: "none",
-            padding: "12px",
-            borderRadius: "8px",
-            width: "100%",
-            cursor: "pointer",
-            fontWeight: "bold",
-            marginTop: "10px",
-          }}
+          className={`sin-stock ${limiteAlcanzado || stock === 0 ? "disabled" : ""}`}
         >
-          {stock === 0 ? "Agotado" : limiteAlcanzado ? "Límite" : "Añadir"}
+          {stock === 0 ? "Agotado" : limiteAlcanzado ? "Sin Stock" : "Añadir"}
         </button>
       </div>
     </div>

@@ -1,4 +1,3 @@
-/* 1. CONFIGURACIÓN GENERAL */
 .carrito-container { 
     padding: 40px; 
     min-height: 80vh; 
@@ -13,7 +12,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 2. DISEÑO DEL CARRITO (CON PRODUCTOS) */
 .carrito-layout {
     display: flex;
     gap: 30px;
@@ -24,7 +22,6 @@
     flex: 2;
 }
 
-/* Tarjeta del dulce */
 .card-item {
     display: flex;
     justify-content: space-between;
@@ -41,7 +38,6 @@
     color: #333;
 }
 
-/* --- EL GRUPO DEL INPUT Y BOTONES (LO QUE QUERÍAS) --- */
 .ajuste-cantidad-box { 
     margin-top: 15px; 
 }
@@ -89,7 +85,6 @@
     background: #eee; 
 }
 
-/* 3. COLUMNA DERECHA (PAGO) */
 .total-box {
     flex: 1;
     padding: 25px;
@@ -119,7 +114,6 @@
     cursor: pointer; 
 }
 
-/* 4. MENSAJE CARRITO VACÍO */
 .carrito-vacio-container { 
     text-align: center; 
     padding: 80px 20px;
@@ -138,12 +132,10 @@
     font-weight: bold;
 }
 
-/* 5. MÓVIL */
 @media (max-width: 768px) {
     .carrito-layout { flex-direction: column; }
     .total-box { width: 100%; position: static; }
 }
-/* El grupo del input y botones pegaditos */
 .ajuste-cantidad-box { 
     margin-top: 10px; 
 }
@@ -182,7 +174,6 @@
 .btn-restar { color: #dc3545; border-right: 1px solid #ddd; }
 .btn-ajuste:hover { background: #e5e5e5; }
 
-/* Caja de la derecha */
 .total-box h2 {
     font-size: 1.2rem;
     margin-bottom: 10px;

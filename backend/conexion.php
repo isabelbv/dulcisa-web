@@ -16,8 +16,7 @@ if ($conn->connect_error) {
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
 
-// Esta es la consulta base que vamos a usar en ambos casos
-// Seleccionamos los campos del producto y agrupamos sus iconos de alérgenos
+
 $queryBase = "SELECT 
                 p.*, 
                 GROUP_CONCAT(a.icono) as iconos_alergenos
@@ -26,7 +25,7 @@ $queryBase = "SELECT
               LEFT JOIN alergenos a ON pa.alergeno_id = a.id";
 
 if ($id) {
-    // CASO 1: Buscar un producto específico por ID
+   
     $sql = $queryBase . " WHERE p.id = ? GROUP BY p.id";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
@@ -40,7 +39,6 @@ if ($id) {
     }
     $stmt->close();
 } else {
-    // CASO 2: Traer TODO el catálogo (Lo que usa tu componente Catalogo.jsx)
     $sql = $queryBase . " GROUP BY p.id";
     $resultado = $conn->query($sql);
     
