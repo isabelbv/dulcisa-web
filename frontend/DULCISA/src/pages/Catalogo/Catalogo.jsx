@@ -26,9 +26,7 @@ const Catalogo = () => {
   }, []);
 
   if (cargando) {
-    return (
-      <div className="loading-container">Cargando dulces...</div>
-    );
+    return <div className="loading-container">Cargando dulces...</div>;
   }
 
   return (

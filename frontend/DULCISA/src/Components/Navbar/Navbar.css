@@ -1,35 +1,26 @@
 .header-container {
-  z-index: 100;
-  width: 100%;
-  padding: 10px 0;
-}
-
-.nav-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 1380px;
-  margin: 0 auto;
+  width: 100%;
   padding: 0 40px;
+  @media (max-width: 800px) {
+    & {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 .main-title {
   font-family: "Pacifico", cursive;
-  font-size: 3rem;
-
-  margin: 0px;
-
+  font-size: 2rem;
   background: linear-gradient(45deg, #93c2f0d7, #d191f395);
-
   -webkit-background-clip: text;
-
   -webkit-text-fill-color: transparent;
-
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
-
   transform: rotate(-5deg) scale(1);
-
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -41,8 +32,19 @@
   background-color: rgb(217, 240, 251);
   backdrop-filter: blur(300px);
   border-radius: 100px;
-  padding: 10px 25px;
+  padding: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  @media (max-width: 800px) {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      backdrop-filter: blur(300px);
+      border-radius: 20px;
+      padding: 10px 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+  }
 }
 .navbar-list {
   display: flex;
@@ -50,4 +52,10 @@
   gap: 50px;
   margin: 0;
   padding: 0;
+  @media (max-width: 800px) {
+    & {
+      display: flex;
+      gap: 20px;
+    }
+  }
 }

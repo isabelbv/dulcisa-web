@@ -6,9 +6,7 @@ const Navbar = () => {
   const { totalItems } = useCarrito();
   return (
     <header className="header-container">
-      <div className="nav-wrapper">
         <h1 className="main-title">Dulcisa</h1>
-
         <nav className="navbar-box">
           <ul className="navbar-list">
             <li>
@@ -27,7 +25,6 @@ const Navbar = () => {
             </li>  
           </ul>
         </nav>
-      </div>
     </header>
   );
 };

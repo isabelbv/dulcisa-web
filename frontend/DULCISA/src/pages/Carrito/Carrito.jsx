@@ -87,13 +87,14 @@ const Carrito = () => {
                         type="number"
                         min="0"
                         value={cantidadesAjustar[item.id] || ""}
-                        placeholder="1" 
+                        placeholder="1"
                         onChange={(e) => {
                           const v = parseInt(e.target.value);
                           if (v >= 0 || e.target.value === "")
                             manejarCambioInput(item.id, e.target.value);
                         }}
-                        className="input-ajuste"/>
+                        className="input-ajuste"
+                      />
 
                       <button
                         className="btn-ajuste btn-sumar"

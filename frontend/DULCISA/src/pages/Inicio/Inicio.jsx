@@ -19,8 +19,7 @@ const Inicio = () => {
   ];
 
   return (
-    <main className="Inicio-page">
-     
+    <main className="inicio-page">
       <p className="frase-motivadora">"Pequeños bocados,grandes momentos"</p>
       <div className="carrusel-recogido-container">
         <Swiper
