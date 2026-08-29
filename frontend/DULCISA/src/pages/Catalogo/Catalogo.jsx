@@ -12,8 +12,9 @@ const Catalogo = () => {
   useEffect(() => {
     const obtenerProductos = async () => {
       try {
-        const response = await fetch('api/productos');
-        const data = await response.json()
+        const response = await fetch("api/productos");
+        const data = await response.json();
+        setListaProductos(data);
       } catch (error) {
         console.error("Error al conectar con TiDB:", error);
       } finally {
