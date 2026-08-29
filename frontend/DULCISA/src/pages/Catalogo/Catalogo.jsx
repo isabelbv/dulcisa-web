@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Producto from "../Productos/Productos";
 import "./estilos.css";
 import { useCarrito } from "../../hooks/useCarrito";
+import { db } from "../../service/db";
 
 const Catalogo = () => {
   const { agregarAlCarrito } = useCarrito();
@@ -9,20 +10,17 @@ const Catalogo = () => {
   const [cargando, setCargando] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost/apidulcisa/conexion.php")
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.error) {
-          console.error("Error desde PHP:", data.error);
-        } else {
-          setListaProductos(data);
-        }
+    const obtenerProductos = async () => {
+      try {
+        const productos = await db.execute("SELECT * FROM productos");
+        setListaProductos(productos);
+      } catch (error) {
+        console.error("Error al conectar con TiDB:", error);
+      } finally {
         setCargando(false);
-      })
-      .catch((error) => {
-        console.error("Error al conectar con el servidor:", error);
-        setCargando(false);
-      });
+      }
+    };
+    obtenerProductos();
   }, []);
 
   if (cargando) {
