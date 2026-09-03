@@ -12,7 +12,7 @@ const Catalogo = () => {
   useEffect(() => {
     const obtenerProductos = async () => {
       try {
-        const response = await fetch("api/productos");
+        const response = await fetch("/api/productos");
         const data = await response.json();
         setListaProductos(data);
       } catch (error) {

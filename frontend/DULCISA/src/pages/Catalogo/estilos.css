@@ -1,16 +1,17 @@
 .catalogo-container {
   background-color: #eae3f5 !important;
-  padding: 40px 20px;
+  padding: 10px 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
-  @media (max-width: 800px) {
-    & {
-      padding: 0;
-      margin: 50px;
-    }
+}
+
+@media (max-width: 800px) {
+  .catalogo-container {
+    padding: 0;
+    margin: 50px;
   }
 }
 
@@ -18,7 +19,7 @@
   text-align: center;
   padding: 50px;
   background-color: #eae3f5;
-  min-height: 100vh;
+ 
 }
 
 .catalogo-container h1 {
@@ -29,10 +30,12 @@
 
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 37px;
+
   padding: 20px;
   justify-content: center;
+  perspective: 1000px; /* Perspectiva 3D para evitar saltos bruscos */
 }
 
 @media (max-width: 768px) {
@@ -50,6 +53,7 @@
 .producto-card p {
   color: #555;
 }
+
 .producto-card .precio {
   font-weight: bold;
   font-size: 1.3rem;
@@ -81,4 +85,13 @@
   margin: 0 5px 30px 5px;
   cursor: pointer;
   font-weight: bold;
+}
+
+/* Efecto hover: se adelanta y se ilumina en blanco alrededor */
+.producto-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 10px 25px rgba(255, 255, 255, 0.9),
+    0 0 18px rgba(56, 9, 150, 0.85);
+  z-index: 5; /* Eleva la tarjeta sobre las demás al pasar el ratón */
 }
