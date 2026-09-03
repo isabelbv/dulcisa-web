@@ -14,7 +14,7 @@ const Footer = () => {
 
         <div className="footer-section">
           <h2 className="footer-logo">Contactos</h2>
-          <p className="footer-description">contacta@dulcisa.com</p>
+          <p className="footer-description">@dulcisa99@gmail.com</p>
         </div>
         <div className="footer-bottom">
           <p className="footer-pie">&copy; 2026 Dulcisa - Todos los derechos reservados</p>

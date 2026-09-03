@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 const Inicio = () => {
   const postres = [
-    'https://images.pexels.com/photos/7474290/pexels-photo-7474290.jpeg',
+    ' https://nozzlkvanviqmwblhzpr.supabase.co/storage/v1/object/public/postres/browniepagi.png',
     'https://images.pexels.com/photos/33012123/pexels-photo-33012123.jpeg',
     'https://images.pexels.com/photos/30694835/pexels-photo-30694835.jpeg',
     'https://images.pexels.com/photos/29961482/pexels-photo-29961482.jpeg',
